@@ -1,0 +1,12 @@
+.Skills {
+  background: var(--primaryColor);
+  color: white;
+}
+
+.Skills>h2 {
+  font-weight: 600;
+  font-size: 2.2em;
+  text-align: center;
+  padding: 40px;
+  margin: 0;
+}

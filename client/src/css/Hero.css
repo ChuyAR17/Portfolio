@@ -1,0 +1,15 @@
+.Hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../images/small.jpg');
+  background-size: cover;
+}
+
+.Hero>h1 {
+  margin: 30vh;
+  color: white;
+  font-weight: 400;
+}

@@ -1,0 +1,52 @@
+.Contact {
+  background: var(--primaryColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Contact>h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+  color: white;
+}
+
+.Contact>p {
+  color: white;
+  margin: 0 0 40px 0;
+  font-size: 1.2em;
+}
+
+.Contact>span {
+  color: white;
+  font-size: 1.4em;
+}
+
+.Contact>pre {
+  color: white;
+  font-size: 1.4em;
+  color: var(--links);
+}
+
+.Social {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 10px 0;
+}
+
+.Social>span {
+  color: white;
+  font-size: 1.4em;
+}
+
+.Social>img {
+  border-radius: 50%;
+  background: gray;
+  height: 60px;
+  width: 60px;
+  margin-right: 30px;
+}

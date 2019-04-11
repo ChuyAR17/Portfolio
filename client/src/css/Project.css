@@ -1,0 +1,30 @@
+.Project {
+  background: var(--primaryColor);
+  color: white;
+  border-top: 1px solid white;
+}
+
+.Project>h3 {
+  font-size: 2.1em;
+  font-weight: 500;
+  padding: 40px 0 30px 30px;
+  margin: 0;
+}
+
+.Project>p {
+  margin: 0;
+  font-size: 1.4em;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.ProjectMoreInfo {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectMoreInfo>a {
+  font-weight: 500;
+  font-size: 1.3em;
+}

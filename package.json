@@ -1,0 +1,56 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack-dev-server -W --config ./webpack/webpack.dev.config.js --display-error-details --mode development",
+    "build:local": "webpack --env.NODE_ENV=local --display-error-details",
+    "build:prod": "webpack -p --config ./webpack/webpack.config.js --display-error-details"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChuyAR17/Portfolio.git"
+  },
+  "keywords": [
+    "Webpack",
+    "PostCSS"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChuyAR17/Portfolio/issues"
+  },
+  "homepage": "https://github.com/ChuyAR17/Portfolio#readme",
+  "devDependencies": {
+    "babel-eslint": "10.0.1",
+    "css-loader": "2.1.1",
+    "cssnano": "4.1.10",
+    "eslint": "5.16.0",
+    "eslint-loader": "2.1.2",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "0.5.0",
+    "postcss": "7.0.14",
+    "postcss-import": "12.0.1",
+    "postcss-loader": "3.0.0",
+    "postcss-preset-env": "6.6.0",
+    "style-loader": "0.23.1",
+    "stylelint": "9.10.1",
+    "stylelint-webpack-plugin": "0.10.5",
+    "url-loader": "1.1.2",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.5",
+    "image-webpack-loader": "^4.6.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-router-dom": "5.0.0"
+  }
+}
