@@ -1,2 +1,8 @@
-# CopaBuhos
-Este es un proyecto colectivo entre estudiantes de la Universidad de Sonora para ayudar a el manejo de la CopaBuhos una competencia interna de la universidad.
+# Portfolio
+Proyecto personal para mostrar mi portafolio de proyectos y paginas realizadas.
+
+# Tecnologias
+* ReactJs
+* Webpack
+* Javascript
+* Css
