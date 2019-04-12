@@ -18,6 +18,31 @@
   margin: 0;
 }
 
+.Menu {
+  height: 40px;
+  width: 40px;
+  background: url('../images/menu.png');
+  background-size: cover;
+  background-position: initial;
+  position: absolute;
+  margin-left: 10px;
+  left: 0;
+}
+
+.Menu:hover {
+  animation: menu 1.8s steps(6);
+  animation-fill-mode: backwards;
+}
+
+@keyframes menu {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -238px;
+  }
+}
+
 @keyframes header {
   from {
     transform: translateY(-60px);
