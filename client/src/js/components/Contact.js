@@ -15,19 +15,19 @@ class Contact extends Component {
         </p>
         <div className="Social">
           <img src="" alt="img"/>
-          <span>Github</span>
+          <a href="https://github.com/ChuyAR17" target="blank">Github</a>
         </div>
         <div className="Social">
           <img src="" alt="img"/>
-          <span>Twitter</span>
+          <a href="https://twitter.com/JRamirezR17" target="blank">Twitter</a>
         </div>
         <div className="Social">
           <img src="" alt="img"/>
-          <span>LinkIn</span>
+          <a href="https://www.linkedin.com/in/jesusramirezr17/" target="blank">LinkedIn</a>
         </div>
         <div className="Social">
           <img src="" alt="img"/>
-          <span>Instagram</span>
+          <a href="https://instagram.com/j_ramirezr17" target="blank">Instagram</a>
         </div>
         <pre>@MIT Licence Protection</pre>
       </div>
