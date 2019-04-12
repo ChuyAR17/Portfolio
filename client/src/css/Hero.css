@@ -1,15 +1,35 @@
+.HeroContainer {
+  background-image: url('../images/small.jpg');
+  background-size: cover;
+}
+
 .Hero {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('../images/small.jpg');
-  background-size: cover;
+  background-color: rgba(2, 43, 51, 0.8);
 }
 
 .Hero>h1 {
   margin: 30vh;
   color: white;
   font-weight: 400;
+  animation: hero 2s linear 2s 1 none;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.Hero>a:hover {
+  box-shadow: 0 0 8px gray;
+}
+
+@keyframes hero {
+  0% { 
+    opacity: 0;
+  }
+  100% { 
+    opacity: 1;
+  }
 }

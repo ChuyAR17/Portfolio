@@ -1,6 +1,10 @@
 import React, {Component} from 'react'
 
 import '../../css/Contact.css'
+import Github from '../../images/github.png'
+import Twitter from '../../images/twitter.png'
+import LinkedIn from '../../images/linkedin.png'
+import Instagram from '../../images/instagram.png'
 
 class Contact extends Component {
   render() {
@@ -14,19 +18,19 @@ class Contact extends Component {
           pages...
         </p>
         <div className="Social">
-          <img src="" alt="img"/>
+          <img src={Github} alt="Github"/>
           <span>Github</span>
         </div>
         <div className="Social">
-          <img src="" alt="img"/>
+          <img src={Twitter} alt="Twitter"/>
           <span>Twitter</span>
         </div>
         <div className="Social">
-          <img src="" alt="img"/>
+          <img src={LinkedIn} alt="LinkedIn"/>
           <span>LinkIn</span>
         </div>
         <div className="Social">
-          <img src="" alt="img"/>
+          <img src={Instagram} alt="Instagram"/>
           <span>Instagram</span>
         </div>
         <pre>@MIT Licence Protection</pre>
