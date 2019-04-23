@@ -16,13 +16,12 @@ module.exports = {
   },
   module: {
     rules: [
-      loaders.MediaLoader,
       loaders.JSLoader,
+      loaders.MediaLoader,
       loaders.CSSDevLoader,
     ]
   },
   plugins: [
     plugins.MiniCssExtractPlugin,
-    plugins.StyleLintPlugin,
   ]
 }

@@ -1,5 +1,4 @@
 .Header {
-  background: rgba(0, 0, 0, 0);
   height: 60px;
   display: flex;
   justify-content: center;
@@ -8,8 +7,8 @@
   left: 0;
   right: 0;
   top: 0;
-  animation: header 2s;
   z-index: 1;
+  animation: header 2s;
 }
 
 .Header>h2 {
@@ -30,8 +29,16 @@
 }
 
 .Menu:hover {
-  animation: menu 1.8s steps(6);
+  animation: menu .8s steps(6);
   animation-fill-mode: backwards;
+}
+
+.HeaderVisible {
+  animation: opacity .8s forwards;
+}
+
+.HeaderInvisible {
+  background: transparent;
 }
 
 @keyframes menu {
@@ -51,5 +58,15 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+@keyframes opacity {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: var(--primaryColor);
   }
 }

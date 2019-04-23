@@ -12,21 +12,34 @@ import Contact from './Contact'
 class App extends Component{
   constructor(props){
     super(props)
+    this.handleScroll = this.handleScroll.bind(this)
     this.state = {
-      opacity: 'HeaderInvisible'
+      opacity: 'HeaderInvisible',
+      upToDown: 'UpToDown'
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+  
   handleScroll() {
-    if (document.documentElement.scrollTop > 60) {
+    const windowBottom = window.innerHeight + window.pageYOffset
+    if (windowBottom >= (window.innerHeight*2)) {
       this.setState({ opacity: 'HeaderVisible' })
+    } else {
+      this.setState({ opacity: ' ' })
     }
   }
 
   render() {
     return(
       <Fragment>
-        <Header className={this.state.opacity} />
+        <Header className={this.state.opacity} initial={this.state.upToDown}/>
         <Hero></Hero>
         <Portfolio></Portfolio>
         <Skills></Skills>

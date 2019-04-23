@@ -60,20 +60,3 @@ a.link-unstyled:hover {
   color: #fff;
   background-color: var(--btnPrimaryHover);
 }
-
-.HeaderVisible {
-  animation: opacity 2s;
-}
-
-.HeaderInvisible {
-  background: rgba(0, 0, 0, 0);
-}
-
-@keyframes opacity {
-  from {
-    background: rgba(0, 0, 0, 0);
-  }
-  to {
-    background: var(--primaryColor);
-  }
-}
