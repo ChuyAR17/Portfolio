@@ -19,7 +19,7 @@ module.exports = (env) => {
     },
     plugins: [
       plugins.MiniCssExtractPlugin,
-      plugins.StyleLintPlugin,
+      // plugins.StyleLintPlugin,
     ]
   }
 }

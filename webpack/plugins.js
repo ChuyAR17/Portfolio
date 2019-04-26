@@ -1,6 +1,7 @@
 const path = require('path')
 const _MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const _StyleLintPlugin = require('stylelint-webpack-plugin')
+const _ProposalClassProperties = require('@babel/plugin-proposal-class-properties')
 
 const MiniCssExtractPlugin = new _MiniCssExtractPlugin({
   filename: '[name].bundle.css',

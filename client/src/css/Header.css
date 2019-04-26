@@ -1,5 +1,4 @@
 .Header {
-  background: var(--primaryColor);
   height: 60px;
   display: flex;
   justify-content: center;
@@ -8,11 +7,66 @@
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 1px solid var(--secondaryColor);
+  z-index: 1;
+  animation: header 2s;
 }
 
 .Header>h2 {
   font-weight: 500;
   color: white;
   margin: 0;
+}
+
+.Menu {
+  height: 40px;
+  width: 40px;
+  background: url('../images/menu.png');
+  background-size: cover;
+  background-position: initial;
+  position: absolute;
+  margin-left: 10px;
+  left: 0;
+}
+
+.Menu:hover {
+  animation: menu .8s steps(6);
+  animation-fill-mode: backwards;
+}
+
+.HeaderVisible {
+  animation: opacity .8s forwards;
+}
+
+.HeaderInvisible {
+  background: transparent;
+}
+
+@keyframes menu {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -238px;
+  }
+}
+
+@keyframes header {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes opacity {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: var(--primaryColor);
+  }
 }

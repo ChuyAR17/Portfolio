@@ -20,13 +20,21 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+=======
+  font-family: 'Open Sans', sans-serif;
+>>>>>>> dev
   background: var(--secondaryColor);
   padding: 0;
   margin: 0;
 }
 
+<<<<<<< HEAD
 h1 {
+=======
+h1, h2, h3, h4 {
+>>>>>>> dev
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -41,6 +49,7 @@ a.link-unstyled:hover {
 
 .btn {
   padding: 0.4rem 2rem;
+  cursor: pointer;
 }
 
 .btn.btn-primary {
@@ -58,30 +67,4 @@ a.link-unstyled:hover {
 .btn.btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
   background-color: var(--btnPrimaryHover);
-}
-
-.btn.btn-primary:not(:disabled):not(.disabled):focus {
-  box-shadow: 0 0 0 0.2rem rgba(125, 205, 64, 0.5);
-}
-
-.btn.btn-danger {
-  color: #fff;
-  background-color: #CD4040;
-  border-color: #CD4040;
-}
-
-.btn.btn-danger:not(:disabled):not(.disabled):hover {
-  color: #fff;
-  background-color: #CD4040;
-  border-color: #CD4040;
-}
-
-.btn.btn-danger:not(:disabled):not(.disabled):active {
-  color: #fff;
-  background-color: #CD4040;
-  border-color: #CD4040;
-}
-
-.btn.btn-danger:not(:disabled):not(.disabled):focus {
-  box-shadow: 0 0 0 0.2rem rgba(255, 64, 64, 0.5);
 }
