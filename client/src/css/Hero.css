@@ -1,12 +1,6 @@
 .HeroContainer {
   background-image: url('../images/small.jpg');
   background-size: cover;
-<<<<<<< HEAD
-=======
-}
-
-.Hero {
->>>>>>> dev
   height: 100vh;
 }
 
@@ -15,25 +9,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-<<<<<<< HEAD
-  background: rgb(2, 43, 51, .8);
-  height: 100vh;
-=======
   background-color: rgba(2, 43, 51, 0.8);
->>>>>>> dev
 }
 
 .Hero>h1 {
   margin: 30vh;
   color: white;
   font-weight: 400;
-<<<<<<< HEAD
-}
-
-.Hero>a {
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-=======
   animation: hero 2s linear 2s 1 none;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -50,5 +32,4 @@
   100% { 
     opacity: 1;
   }
->>>>>>> dev
 }

@@ -13,8 +13,9 @@ module.exports = (env) => {
     },
     module: {
       rules: [
-        loaders.CSSLoaderExtract,
-        loaders.JSLoader
+        loaders.MediaLoader,
+        loaders.CSSLoader,
+        loaders.JSLoader,
       ]
     },
     plugins: [
