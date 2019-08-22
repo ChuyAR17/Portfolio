@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 node_modules
+=======
+# folders
+node_modules/
+
+#  files
+package-lock.json
+>>>>>>> 8f91450... [ADD]-->Agregando nueva estructura base del projecto
