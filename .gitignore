@@ -1,5 +1,5 @@
 # folders
 node_modules/
 
-# files
-yarn.lock
+#  files
+package-lock.json
