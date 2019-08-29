@@ -1,41 +1,40 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const TerserJsPlugin = require('terser-webpack-plugin')
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const TerserJsPlugin = require("terser-webpack-plugin");
+const WebpackPWAManifestPlugin = require("webpack-pwa-manifest");
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, './client/src/js/index.js')
+    app: path.resolve(__dirname, "client/src/js/index.js")
   },
   output: {
-    path: path.resolve(__dirname, './client/public/'),
-    filename: 'js/[name].[hash].bundle.js',
-    publicPath: 'http://localhost:3001/',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    path: path.resolve(__dirname, "client/public/"),
+    filename: "js/[name].[hash].bundle.js",
+    // publicPath: "http://localhost/", url del servidor
+    chunkFilename: "js/[id].[chunkhash].js"
   },
   optimization: {
-    minimizer: [
-      new TerserJsPlugin()
-    ]
+    minimizer: [new TerserJsPlugin()]
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-plugin'
+        use: "babel-loader"
       },
       {
         test: /\.(jpg|png|gif|svg|jpge)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'url-loader',
+          loader: "url-loader",
           options: {
             limit: 10000,
-            name: '[hash].[ext]',
-            outputPath: 'assets'
+            name: "[hash].[ext]",
+            outputPath: "assets"
           }
         }
       }
@@ -43,27 +42,24 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Jesus Ramirez-Portfolio',
-      filename: path.resolve(__dirname, './client/public/index.html'),
-      template: path.resolve(__dirname, './client/src/index.html')
+      favicon: path.resolve(__dirname, "client/src/images", "favicon.png"),
+      template: path.resolve(__dirname, "client/src", "index.html"),
+      filename: path.resolve(__dirname, "client/public", "index.html")
     }),
-    // Plugins para generar los archivos del PWA
-    // Configuracion del manifest para la PWA
-    // new WebpackPWAManifestPlugin({
-    //   name: 'Jesus Ramirez-Portfolio',
-    //   short_name: 'JR Portfolio',
-    //   description: 'Soy Jesus Ramirez y este es mi portafolio personal',
-    //   background_color: '#fff',
-    //   theme_color: '#b1a',
-    // Iconos por definir
-    // icons: [
-    //   {
-    //     src: path.resolve(__dirname, '../src/assets/icon.png'),
-    //     sizes: [96,128,192,256,384,512]
-    //   }
-    // ]
-    // }),
-    // Configuracion del service worker para el caché de la app
+    new WebpackPWAManifestPlugin({
+      name: "Jesus Ramirez-Portfolio",
+      short_name: "JR Portfolio",
+      description: "Soy Jesus Ramirez y este es mi portafolio personal",
+      background_color: "#fff",
+      theme_color: "#b1a",
+      icons: [
+        {
+          src: path.resolve(__dirname, "client/src/images/favicon.png"),
+          sizes: [96, 128, 192, 256, 384]
+        }
+      ]
+    }),
+    // Configuración para los metodos de caching
     // new WorkboxWebpackPlugin.GenerateSW({
     //   runtimeCaching: [
     //     {
@@ -83,15 +79,14 @@ module.exports = {
     //   ]
     // }),
     new webpack.DllReferencePlugin({
-      manifest: require('./modules-manifest.json.js')
+      manifest: require("./modules-manifest.json")
     }),
     new AddAssetHtmlPlugin({
-      filename: path.resolve(__dirname, './src/client/public/js/*.dll.js'),
-      outputPath: 'js',
-      publicPath: 'http://localhost: 3001/js/'
+      filepath: path.resolve(__dirname, "client/public/js/*.dll.js"),
+      outputPath: "js"
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ['**/app.*']
+      cleanOnceBeforeBuildPatterns: ["**/app.*"]
     })
   ]
-}
+};
