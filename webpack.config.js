@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "client/public/"),
     filename: "js/[name].[hash].bundle.js",
-    // publicPath: "http://localhost/", url del servidor
+    publicPath: "https://chuyar17.github.io/Portfolio/",
     chunkFilename: "js/[id].[chunkhash].js"
   },
   optimization: {
@@ -86,7 +86,7 @@ module.exports = {
       outputPath: "js"
     }),
     new CleanWebpackPlugin({
-      cleanOnceBeforeBuildPatterns: ["**/app.*"]
+      cleanOnceBeforeBuildPatterns: ["**/app.*", "**/manifest.*"]
     })
   ]
 };
