@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Poppins:wght@300;400&display=swap');
+/* Colors */
+:root {
+    --primary-blue: #17D8FF;
+    --light-blue: #5FB7E3;
+    --white-blue: #F5FCFF;
+    --gray-blue: #96A2A8;
+    --dark-blue: #062433;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-blue);
+    color: var(--white-blue);
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+p, small, strong {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--white-blue);
+    text-decoration: none;
+}
+footer {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    height: 40px;
+}
+.header-container {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid var(--white-blue);
+    border-radius: 5px;
+}
+.header-container button {
+    width: 100%;
+    max-width: 180px;
+    border: 0;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: var(--light-blue);
+    color: var(--white-blue);
+}
+.section {
+    margin: 50px;
+}
+.page-frame {
+    height: 100vh;
+    position: fixed;
+    padding: 20px 30px 20px 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.page-frame--menuicon {
+    display: block;
+    position: fixed;
+    left: 15px;
+    top: 20px;
+    height: 20px;
+    width: 20px;
+    background-image: url("@icons/Menu.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.page-frame--upperline {
+    background-color: var(--primary-blue);
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    height: 2px;
+    box-shadow: 0px 0px 4px var(--primary-blue);
+    border-radius: 4px;
+}
+.page-frame--leftline {
+    background-color: var(--primary-blue);
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    height: 60%;
+    width: 2px;
+    box-shadow: 0px 0px 4px var(--primary-blue);
+    border-radius: 4px;
+}
+.page-frame--rightline {
+    background-color: var(--primary-blue);
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    height: 60%;
+    width: 2px;
+    box-shadow: 0px 0px 4px var(--primary-blue);
+    border-radius: 4px;
+}
+.page-frame--info-container {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    right: 10px;
+    height: 25%;
+    display: flex;
+}
+.page-frame--info-container .page-frame--icons {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.page-frame--info-container .page-frame--email {
+    width: 50%;
+}
+.page-frame--info-container .page-frame--email p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    transform: rotate(90deg) translate(135px, 10px);
+    transform-origin: right;
+    width: 100%;
+}
+.page-frame--github {
+    display: block;
+    fill: var(--white-blue);
+    height: 25px;
+    width: 25px;
+    background-image: url("@icons/Github.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-github {
+    fill: var(--white-blue);
+}
+.page-frame--linkedin {
+    display: block;
+    fill: var(--white-blue);
+    height: 25px;
+    width: 25px;
+    background-image: url("@icons/LinkedIn.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.page-frame--twitter {
+    display: block;
+    fill: var(--white-blue);
+    height: 25px;
+    width: 25px;
+    background-image: url("@icons/Twitter.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.page-frame--instagram {
+    display: block;
+    fill: var(--white-blue);
+    height: 25px;
+    width: 25px;
+    background-image: url("@icons/Instagram.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
