@@ -12,7 +12,7 @@ body {
     padding: 0;
     background-color: var(--dark-blue);
     color: var(--white-blue);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppons', sans-serif;
 }
 h1, h2, h3, h4, h5 {
     font-family: 'Noto Sans SC', sans-serif;
@@ -34,81 +34,79 @@ footer {
     height: 40px;
 }
 .header-container {
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-container .menu-icon {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    background-image: url('@icons/Menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-container .menu-icon:hover {
+    box-shadow: 0px 0px 5px 2px var(--white-blue);
+}
+.header-container .logo-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    background-image: url('@icons/Logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container {
+    margin: 20px;
+    border-left: 2px solid var(--light-blue);
+    border-right: 2px solid var(--light-blue);
+}
+.header-container {
+    height: 60px;
+    width: 100%;
+}
+.greeting-card {
     margin: 50px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     border: 2px solid var(--white-blue);
     border-radius: 5px;
 }
-.header-container button {
+.greeting-card h4 {
+    margin: 15px 0;
+}
+.greeting-card .button-mail {
+    margin: 10px 20px;
     width: 100%;
     max-width: 180px;
+    align-self: center;
+    text-align: center;
     border: 0;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 10px;
     border-radius: 4px;
     background-color: var(--light-blue);
     color: var(--white-blue);
 }
+.greeting-card .button-mail:hover {
+    background-color: var(--primary-blue);
+    box-shadow: 0px 0px 5px 2px var(--gray-blue);
+}
 .section {
-    margin: 50px;
+    margin: 0px 30px 80px 30px;
 }
-.page-frame {
-    height: 100vh;
-    position: fixed;
-    padding: 20px 30px 20px 30px;
-    top: 0;
-    left: 0;
-    right: 0;
+.title {
+    margin-bottom: 5px;
+    font-size: 22px;
 }
-.page-frame--menuicon {
-    display: block;
-    position: fixed;
-    left: 15px;
-    top: 20px;
-    height: 20px;
-    width: 20px;
-    background-image: url("@icons/Menu.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.page-frame--upperline {
-    background-color: var(--primary-blue);
-    position: fixed;
-    top: 20px;
-    left: 50px;
-    right: 50px;
-    height: 2px;
-    box-shadow: 0px 0px 4px var(--primary-blue);
-    border-radius: 4px;
-}
-.page-frame--leftline {
-    background-color: var(--primary-blue);
-    position: fixed;
-    top: 50px;
-    left: 20px;
-    height: 60%;
-    width: 2px;
-    box-shadow: 0px 0px 4px var(--primary-blue);
-    border-radius: 4px;
-}
-.page-frame--rightline {
-    background-color: var(--primary-blue);
-    position: fixed;
-    top: 50px;
-    right: 20px;
-    height: 60%;
-    width: 2px;
-    box-shadow: 0px 0px 4px var(--primary-blue);
-    border-radius: 4px;
-}
-.page-frame--info-container {
-    position: fixed;
-    bottom: 20px;
-    left: 10px;
-    right: 10px;
-    height: 25%;
-    display: flex;
+.subtitle {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 .page-frame--info-container .page-frame--icons {
     width: 50%;
@@ -127,46 +125,107 @@ footer {
     transform-origin: right;
     width: 100%;
 }
-.page-frame--github {
-    display: block;
-    fill: var(--white-blue);
-    height: 25px;
-    width: 25px;
-    background-image: url("@icons/Github.svg");
+.side-containers {
+    height: 205px;
+    width: 30px;
+    top: calc(100vh - 24%);
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 9;
+}
+.icons-container {
+    left: 6px;
+}
+.email-container {
+    right: 6px;
+}
+.email-container a {
+    height: 100%;
+    transform: rotate(90deg);
+    transform-origin: top;
+    left: 13px;
+    position: relative;
+    bottom: -25px;
+    font-size: 14px;
+}
+.icon {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 5px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.icon-github {
-    fill: var(--white-blue);
+.icon:hover {
+    box-shadow: 0px 0px 4px 3px var(--primary-blue);
 }
-.page-frame--linkedin {
-    display: block;
-    fill: var(--white-blue);
-    height: 25px;
-    width: 25px;
-    background-image: url("@icons/LinkedIn.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.icons-container .icon-github {
+    background-image: url('@icons/Github.svg');
 }
-.page-frame--twitter {
-    display: block;
-    fill: var(--white-blue);
-    height: 25px;
-    width: 25px;
-    background-image: url("@icons/Twitter.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.icons-container .icon-linkedin {
+    background-image: url('@icons/LinkedIn.svg');
 }
-.page-frame--instagram {
-    display: block;
-    fill: var(--white-blue);
-    height: 25px;
-    width: 25px;
-    background-image: url("@icons/Instagram.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.icons-container .icon-twitter {
+    background-image: url('@icons/Twitter.svg');
+}
+.icons-container .icon-instagram {
+    background-image: url('@icons/Instagram.svg');
+}
+.about-me{
+    text-align: justify;
+}
+.experience-container--card {
+    margin: 20px 0;
+}
+.experience-container--card p a {
+    font-size: 12px;
+    font-weight: bold;
+}
+.experience-container--card p span {
+    font-size: 12px;
+}
+.proyect-card {
+    margin-bottom: 30px;
+}
+.proyect-card a img {
+    width: 100%;
+    margin-top: 10px;
+}
+.proyect-card a img:hover {
+    box-shadow: 0px 0px 8px 1px var(--primary-blue);
+    cursor: pointer;
+}
+.proyect-card h4 {
+    margin: 10px 0;
+}
+.proyect-card p {
+    font-size: 14px;
+}
+.proyect-card--links {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+.course-card {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.course-card a {
+    margin-top: 10px;
+    text-align: center;
+}
+.course-card a img {
+    width: 50%;
+}
+.course-card--title {
+    font-size: 14px;
+}
+.course-card p a {
+    font-size: 12px;
+    font-style: italic;
 }

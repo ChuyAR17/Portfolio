@@ -1,96 +1,101 @@
+// Images
+import youtube_landing from '@images/youtube-landing.png';
+import github_landing from '@images/github-landing.png';
+
+// Badges
+import javascript_badge from '@images/JavaScript-Bagde.png';
+import frontend_badge from '@images/FrontEnd-Badge.png';
+import webdevelopment_badge from '@images/WebDevelopment-Badge.png';
+
+
 const Template = async () => {
   const view = `
-    <div class="page-frame">
-    <div class="page-frame--upperline"></div>
-    <div class="page-frame--leftline"></div>
-    <div class="page-frame--rightline"></div>
-    <span class="page-frame--menuicon"></span>
-    <span class="page-frame--logoicon"></span>
-    <div class="page-frame--info-container">
-        <div class="page-frame--icons">
-            <span class="page-frame--github"></span>
-            <span class="page-frame--linkedin"></span>
-            <span class="page-frame--twitter"></span>
-            <span class="page-frame--instagram"></span>
-        </div>
-        <div class="page-frame--email">
-            <p>jar170396@gmail.com</p>
-        </div>
+    <header class="header-container">
+        <div class="menu-icon"></div>
+        <div class="logo-icon" title="Jesus Ramirez"></div>
+    </header>
+    <main class="main-container">
+    <div class="side-containers icons-container">
+        <a class="icon icon-github" href="https://github.com/ChuyAR17" target="_blank" rel="noopener noreferrer"></a>
+        <a class="icon icon-linkedin" href="https://www.linkedin.com/in/jesusramirezr17/" target="_blank" rel="noopener noreferrer"></a>
+        <a class="icon icon-twitter" href="https://twitter.com/JRamirezR17" target="_blank" rel="noopener noreferrer"></a>
+        <a class="icon icon-instagram" href="https://www.instagram.com/j_ramirezr17/" target="_blank" rel="noopener noreferrer"></a>
     </div>
-  </div>
-  <header>
-    <div class="header-container">
+    <div class="side-containers email-container">
+        <a href="mailto:jar170396@gmail.com">jar170395@gmail.com</a>
+    </div>
+    <section class="greeting-card section">
         <h1>Hello!</h1>
-        <h4>I'm Jesús a Front-end developer.</h4>
-        <button>Let's work</button>
-    </div>
-  </header>
-  <main>
-    <section class="section">
-        <h3>About me</h3>
-        <p>Who I am.</p>
-        <p>I'm a front-end developer passionate for build custom and person oriented software and apps.</p>
+        <h4>I'm Jesús a Front-end Engineer.</h4>
+        <a class="button-mail" href="mailto:jar170396@gmail.com">Let's work together</a>
     </section>
     <section class="section">
-        <h3>Experience</h3>
-        <p>Where I've worked.</p>
-        <div>
+        <h3 class="title">About me</h3>
+        <p class="subtitle">Who I am.</p>
+        <p class="about-me">I'm a Front-end Engineer passionate for build custom and person-oriented software and apps, always learning how to improve the performance and UX of the apps I've done.</p>
+    </section>
+    <section class="experience-container section">
+        <h3 class="title">Experience</h3>
+        <p class="subtitle">Where I've worked.</p>
+        <div class="experience-container--card">
             <h4>Software Developer</h4>
-            <div>
-                <a href="https://www.caffenio.com" target="_blank" rel="noopener noreferrer"><p>@ CAFFENIO</p></a>
-                <p><small>2019 - </small></p>
-            </div>
+            <p><a href="https://www.caffenio.com" target="_blank" rel="noopener noreferrer">@ CAFFENIO</a></p>
+            <p><span>2019 - Current Job</span></p>
         </div>
-        <div>
+        <div class="experience-container--card">
             <h4>Front-end Engineer</h4>
-            <div>
-                <a href="/" target="_blank" rel="noopener noreferrer"><p>@ PRAGMA</p></a>
-                <p><small>2021 - </small></p>
-            </div>
+            <p><a href="#">@ PRAGMA</a></p>
+            <p><span>2021 - Part Time</span></p>
         </div>
     </section>
     <section class="section">
-        <h3>Proyects</h3>
-        <p>What I've done.</p>
-        <div>
-            <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/" alt="Proyect image"></a>
+        <h3 class="title">Proyects</h3>
+        <p class="subtitle">What I've done.</p>
+        <div class="proyect-card">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <img src="${youtube_landing}" alt="Proyect image"></a>
             <h4>Tournament Manager</h4>
             <p>Organize and manage sport tournamenst.</p>
-            <div>
-                <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">Github Repo</a>
-                <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">Website</a>
+            <div class="proyect-card--links">
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                <a href="https://www.youtubecom/" target="_blank" rel="noopener noreferrer">Website</a>
             </div>
         </div>
-        <div>
+        <div class="proyect-card">
             <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">
-            <img src="/" alt="Proyect image"></a>
+            <img src="${github_landing}" alt="Proyect image"></a>
             <h4>Booking boardrooms</h4>
             <p>Book a boardroom from your office.</p>
-            <div>
+            <div class="proyect-card--links">
                 <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">Github Repo</a>
                 <a href="https://www.github.com/" target="_blank" rel="noopener noreferrer">Website</a>
             </div>
         </div>
     </section>
     <section class="section">
-        <h3>Studies</h3>
-        <p>What I've studied.</p>
-        <div>
+        <h3 class="title">Skills</h3>
+        <p class="subtitle">What I've studied.</p>
+        <div class="course-card">
             <a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">
-            <img src="/" alt="Course badge"></a>
-            <p>Front-end Developer</p>
-            <p>@ Platzi</p>
+            <img src="${javascript_badge}" alt="JavaScript Course badge"></a>
+            <p class="course-card--title">JavaScript Career</p>
+            <p><a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">@ Platzi</a></p>
         </div>
-        <div>
+        <div class="course-card">
             <a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">
-            <img src="/" alt="Course badge"></a>
-            <p>React Developer</p>
-            <p>@ Platzi</p>
+            <img src="${frontend_badge}" alt="FrontEnd Course badge"></a>
+            <p class="course-card--title">Front-End Engineer</p>
+            <p><a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">@ Platzi</a></p>
+        </div>
+        <div class="course-card">
+            <a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">
+            <img src="${webdevelopment_badge}" alt="Web Development Course badge"></a>
+            <p class="course-card--title">Web Development</p>
+            <p><a href="https://www.platzi.com" target="_blank" rel="noopener noreferrer">@ Platzi</a></p>
         </div>
     </section>
-  </main>
-  <footer>Jesús Ramírez | 2021</footer>
+    </main>
+    <footer>Jesús Ramírez | 2021</footer>
   `;
   return view;
 };

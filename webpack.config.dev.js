@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js',
-        // assetModuleFilename: 'assets/images/[hash][ext][query]'
+        assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     mode: 'development',
     devtool: 'source-map',
@@ -20,7 +20,8 @@ module.exports = {
             '@utils': path.resolve(__dirname, 'src/utils/'),
             '@templates': path.resolve(__dirname, 'src/templates/'),
             '@styles': path.resolve(__dirname, 'src/styles/'),
-            '@icons': path.resolve(__dirname, 'src/assets/icons/')
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@images': path.resolve(__dirname, 'src/assets/images/')
         }
     },
     module: {
@@ -41,7 +42,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png/,
+                test: /\.png$/,
                 type: 'asset/resource'
             },
             {
@@ -54,21 +55,7 @@ module.exports = {
                     },
                   },
                 ],
-              },
-            {
-                test: /\.(woff|woff2)$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 10000,
-                        mimetype: "application/font-woff",
-                        name: "[name].[contenthash].[ext]",
-                        outputPath: "./assets/fonts/",
-                        publicPath: "../assets/fonts/",
-                        esModule: false
-                    }
-                }
-            }
+            },
         ]
     },
     plugins: [
@@ -80,14 +67,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'assets/[name].[contenthash].css'
         }),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(__dirname, "src", "assets/images"),
-        //             to: "assets/images"
-        //         }
-        //     ]
-        // }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src", "assets/images"),
+                    to: "assets/images"
+                }
+            ]
+        }),
         new DotEnv(),
         // new BundleAnalyzerPlugin(),
     ],
